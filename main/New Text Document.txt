@@ -1,0 +1,23 @@
+function Person(name, secret)
+{
+    // public
+    this.name = name;
+
+    // private
+    var secret = "secret";
+
+    // public methods have access to private members
+    this.setSecret = function(s) {
+        secret = s;
+    }
+
+    this.getSecret = function() {
+        return secret;
+    }
+}
+
+// Must use getters/setters 
+Person.prototype.spillSecret = function() { var y = this.getSecret;
+y="sds" ;};
+
+module.exports =Person;
